@@ -2,21 +2,21 @@
 Набор автоматических тестов для проверки функциональности API сервиса https://secby.ru. Тесты покрывают аутентификацию, авторизацию, получение профилей пользователей с учетом ролевой модели.
 
 Структура проекта
-api_tests/
-├── README.md - Документация проекта
-├── requirements.txt 
-├── conftest.py Общие фикстуры pytest
-├── api/ 
-│ ├── init.py
-│ ├── auth_api.py - Методы для работы с аутентификацией
-│ └── profiles_api.py - Методы для работы с профилями
-├── tests/ 
-│ ├── init.py
-│ ├── test_auth.py - Тесты авторизации
-│ └── test_profiles.py - Тесты профилей
-└── utils/ 
-├── init.py
-└── validators.py - Валидаторы ответов API
+- api_tests/
+- ├── README.md - Документация проекта
+- ├── requirements.txt 
+- ├── conftest.py Общие фикстуры pytest
+- ├── api/ 
+- │ ├── init.py
+- │ ├── auth_api.py - Методы для работы с аутентификацией
+- │ └── profiles_api.py - Методы для работы с профилями
+- ├── tests/ 
+- │ ├── init.py
+- │ ├── test_auth.py - Тесты авторизации
+- │ └── test_profiles.py - Тесты профилей
+- └── utils/ 
+- ├── init.py
+- └── validators.py - Валидаторы ответов API
 
 Тесты
 
@@ -55,18 +55,18 @@ api_tests/
 - Проверка структуры профилей для разных ролей (user, admin)
 
 Валидаторы (utils/validators.py)
-validate_user_profile_structure() - Проверяет наличие всех обязательных полей в структуре профиля 
-validate_profile_values() - Проверяет соответствие значений полей профиля ожидаемым 
-validate_no_password_field() - Проверяет отсутствие поля password в ответе 
-validate_error_response() - Проверяет статус и сообщение об ошибке в ответе 
+- validate_user_profile_structure() - Проверяет наличие всех обязательных полей в структуре профиля 
+- validate_profile_values() - Проверяет соответствие значений полей профиля ожидаемым 
+- validate_no_password_field() - Проверяет отсутствие поля password в ответе 
+- validate_error_response() - Проверяет статус и сообщение об ошибке в ответе 
 
 Фикстуры (conftest.py)
 
-base_url - Базовый URL API 
-auth_api - Экземпляр класса AuthAPI 
-profiles_api - Экземпляр класса ProfilesAPI 
-user_credentials - Данные пользователя (логин/пароль) 
-admin_credentials - Данные администратора 
-user_token - токен пользователя 
-admin_token - токен администратора 
-role_credentials - Параметризованные данные всех ролей 
+- base_url - Базовый URL API 
+- auth_api - Экземпляр класса AuthAPI 
+- profiles_api - Экземпляр класса ProfilesAPI 
+- user_credentials - Данные пользователя (логин/пароль) 
+- admin_credentials - Данные администратора 
+- user_token - токен пользователя 
+- admin_token - токен администратора 
+- role_credentials - Параметризованные данные всех ролей 
